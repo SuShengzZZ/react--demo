@@ -1,0 +1,70 @@
+.logo{
+    text-align: center;
+    padding: 32px 0;
+    img{
+        width: 30%;
+        height: 30%;
+    }
+}
+.User{
+    display: flex;
+    .U_notice{
+        flex: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .U_setting{
+        flex: 5;
+        display: flex;
+        .S_image{
+            flex: 3;
+        }
+        .S_info{
+            flex: 6;
+            padding: 20px 0 ;
+        }
+        .S_menu{
+            flex: 1;
+            text-align: right;
+        }
+    }
+}
+.gutter-box{
+    border-radius: 5px;
+    border: 1px solid #1890FF;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    .icon{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .garden{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 25px;
+        }
+    }
+    .content{
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 10px 0 ;
+    }
+}
+.ant-tabs{
+    margin-bottom: 20px;
+}
+.lifting{
+    .lifting_content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

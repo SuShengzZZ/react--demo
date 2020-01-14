@@ -1,0 +1,215 @@
+import React, { Component } from 'react'
+import { Tabs } from 'antd';
+import CustomTabPane from './CustomTabPane'
+
+
+
+const { TabPane } = Tabs;
+function callback(key) {
+    // console.log(key);
+}
+
+//只为了展示并不符合实际接口
+const arr = [
+    {
+        tabTitle:'今日',
+        tabContent:[
+            {
+                title:'今日消费总额',
+                money:'0.00',
+                company:'元',
+                icon:'alipay',
+                background:'#59CBCB'
+            },
+            {
+                title:'今日消费人次',
+                money:'0',
+                company:'次',
+                icon:'user',
+                background:'#4EA2EB'
+            },
+            {
+                title:'今日新增会员',
+                money:'0',
+                company:'人',
+                icon:'user-add',
+                background:'#EC7668'
+            },
+            {
+                title:'今日充值金额',
+                money:'0.00',
+                company:'元',
+                icon:'transaction',
+                background:'#45CE80'
+            },
+            {
+                title:'今日充值人次',
+                money:'0',
+                company:'次',
+                icon:'usergroup-add',
+                background:'#EEA652'
+            },
+            {
+                title:'比昨日多消费',
+                money:'0.00',
+                company:'元',
+                icon:'dollar',
+                background:'#59CBCB'
+            }
+        ]
+    },
+    {
+        tabTitle:'昨日',
+        tabContent:[
+            {
+                title:'今日消费总额',
+                money:'0.00',
+                company:'元',
+                icon:'alipay',
+                background:'#59CBCB'
+            },
+            {
+                title:'今日消费人次',
+                money:'0',
+                company:'次',
+                icon:'user',
+                background:'#4EA2EB'
+            },
+            {
+                title:'今日新增会员',
+                money:'0',
+                company:'人',
+                icon:'user-add',
+                background:'#EC7668'
+            },
+            {
+                title:'今日充值金额',
+                money:'0.00',
+                company:'元',
+                icon:'transaction',
+                background:'#45CE80'
+            },
+            {
+                title:'今日充值人次',
+                money:'0',
+                company:'次',
+                icon:'usergroup-add',
+                background:'#EEA652'
+            },
+            {
+                title:'比昨日多消费',
+                money:'0.00',
+                company:'元',
+                icon:'dollar',
+                background:'#59CBCB'
+            }
+        ]
+    },
+    {
+        tabTitle:'近一周',
+        tabContent:[
+            {
+                title:'今日消费总额',
+                money:'0.00',
+                company:'元',
+                icon:'alipay',
+                background:'#59CBCB'
+            },
+            {
+                title:'今日消费人次',
+                money:'0',
+                company:'次',
+                icon:'user',
+                background:'#4EA2EB'
+            },
+            {
+                title:'今日新增会员',
+                money:'0',
+                company:'人',
+                icon:'user-add',
+                background:'#EC7668'
+            },
+            {
+                title:'今日充值金额',
+                money:'0.00',
+                company:'元',
+                icon:'transaction',
+                background:'#45CE80'
+            },
+            {
+                title:'今日充值人次',
+                money:'0',
+                company:'次',
+                icon:'usergroup-add',
+                background:'#EEA652'
+            },
+            {
+                title:'比昨日多消费',
+                money:'0.00',
+                company:'元',
+                icon:'dollar',
+                background:'#59CBCB'
+            }
+        ]
+    },
+    {
+        tabTitle:'近一月',
+        tabContent:[
+            {
+                title:'今日消费总额',
+                money:'0.00',
+                company:'元',
+                icon:'alipay',
+                background:'#59CBCB'
+            },
+            {
+                title:'今日消费人次',
+                money:'0',
+                company:'次',
+                icon:'user',
+                background:'#4EA2EB'
+            },
+            {
+                title:'今日新增会员',
+                money:'0',
+                company:'人',
+                icon:'user-add',
+                background:'#EC7668'
+            },
+            {
+                title:'今日充值金额',
+                money:'0.00',
+                company:'元',
+                icon:'transaction',
+                background:'#45CE80'
+            },
+            {
+                title:'今日充值人次',
+                money:'0',
+                company:'次',
+                icon:'usergroup-add',
+                background:'#EEA652'
+            },
+            {
+                title:'比昨日多消费',
+                money:'0.00',
+                company:'元',
+                icon:'dollar',
+                background:'#59CBCB'
+            }
+        ]
+    }
+]
+export default class ConsumerData extends Component {
+    render() {
+        return (
+            <Tabs defaultActiveKey="0" onChange={callback}>
+                {arr.map((item, index)=>{
+                    return <TabPane tab={item.tabTitle} key={index}>
+                        <CustomTabPane content={item.tabContent}/>
+                    </TabPane>
+                })}
+            </Tabs>
+        )
+    }
+}
